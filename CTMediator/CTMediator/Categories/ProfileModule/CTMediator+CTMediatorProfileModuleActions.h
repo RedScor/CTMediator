@@ -10,5 +10,5 @@
 #import <UIKit/UIKit.h>
 
 @interface CTMediator (CTMediatorProfileModuleActions)
-- (id)CTMediator_nativeViewControllerForProfileWithLoginHandler:(void (^)(UIViewController *))notLoginHandler;
+- (id)CTMediator_nativeViewControllerForProfileWithLoginHandler:(void (^)(UIViewController *, BOOL))notLoginHandler;
 @end

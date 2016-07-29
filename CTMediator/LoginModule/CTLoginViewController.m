@@ -29,7 +29,7 @@
 - (void)loginDimissButtonOnClicked:(UIButton *)button {
     [self dismissViewControllerAnimated:YES completion:^{
         /* 把这一句提到completion外部，就可以得到和淘宝类似效果 */
-        !self.resultHandler ? : self.resultHandler(YES);
+        !self.resultHandler ? : self.resultHandler(NO);
     }];
 }
 

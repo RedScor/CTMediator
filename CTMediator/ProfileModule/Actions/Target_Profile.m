@@ -15,10 +15,10 @@
 - (id)Action_nativeFetchProfileViewController:(NSDictionary *)params {
     CTProfileViewController *viewController = [[CTProfileViewController alloc] init];
     
-    /* 登录是否成功，是否有登录成功回调 */
+    /* 登录是否成功，是否有登录回调 */
     BOOL loginSuccess = [params[@"loginSuccess"] boolValue];
-    void (^loginHandler)(UIViewController *) = params[@"loginHandler"];
-    if (loginSuccess && loginHandler) loginHandler(viewController);
+    void (^loginHandler)(UIViewController *, BOOL) = params[@"loginHandler"];
+    if (loginHandler) loginHandler(viewController, loginSuccess);
     
     return viewController;
 }
