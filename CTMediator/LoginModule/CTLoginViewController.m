@@ -27,9 +27,11 @@
 
 #pragma mark event response
 - (void)loginDimissButtonOnClicked:(UIButton *)button {
+    [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"isLogin"];
+    
     [self dismissViewControllerAnimated:YES completion:^{
         /* 把这一句提到completion外部，就可以得到和淘宝类似效果 */
-        !self.resultHandler ? : self.resultHandler(NO);
+        !self.successHandler ? : self.successHandler();
     }];
 }
 

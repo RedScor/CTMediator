@@ -10,5 +10,5 @@
 #import <UIKit/UIKit.h>
 
 @interface CTLoginViewController : UIViewController
-@property (copy, nonatomic) void (^resultHandler)(BOOL);
+@property (copy, nonatomic) void (^successHandler)();
 @end

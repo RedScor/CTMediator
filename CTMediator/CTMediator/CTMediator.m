@@ -81,8 +81,8 @@ static NSString * const kCTMediatorActionNativePresentLoginViewController = @"na
         [target shouldLoginBeforeAction:actionName]) {
         [self performTarget:kCTMediatorTargetLogin
                      action:kCTMediatorActionNativePresentLoginViewController
-                     params:@{@"target":targetClassString,
-                              @"action":actionString,
+                     params:@{@"target":targetName,
+                              @"action":actionName,
                               @"params":params}];
         return nil;
     }

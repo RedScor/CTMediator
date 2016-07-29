@@ -8,25 +8,19 @@
 
 #import "Target_Login.h"
 #import "CTLoginViewController.h"
-//#import "CTMediator.h"
+
+
+#import "CTMediator.h"
+
 /* 被调用方不要依赖中间件 */
 
 @implementation Target_Login
 - (id)Action_nativePresentLoginViewController:(NSDictionary *)params {
     CTLoginViewController *viewController = [[CTLoginViewController alloc] init];
-    viewController.resultHandler = ^(BOOL loginSuccess){
-        Class targetClass = NSClassFromString(params[@"target"]);
-        id target = [[targetClass alloc] init];
-        SEL action = NSSelectorFromString(params[@"action"]);
-        
-        NSMutableDictionary *paramsM = [params[@"params"] mutableCopy];
-        paramsM[@"loginSuccess"] = @(loginSuccess);
-        
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Warc-performSelector-leaks"
-        [target performSelector:action withObject:paramsM];
-#pragma clang diagnostic pop
-        /* 这里手动执行action */
+    viewController.successHandler = ^{
+        [[CTMediator sharedInstance] performTarget:params[@"target"]
+                                            action:params[@"action"]
+                                            params:params[@"params"]];
     };
 
     [[UIApplication sharedApplication].keyWindow.rootViewController
@@ -37,7 +31,7 @@
 
 - (UIViewController *)Action_nativeFetchLoginViewController:(NSDictionary *)params {
     CTLoginViewController *viewController = [[CTLoginViewController alloc] init];
-    viewController.resultHandler = params[@"resultHandler"];
+    viewController.successHandler = params[@"successHandler"];
     
     return viewController;
 }

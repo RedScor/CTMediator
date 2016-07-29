@@ -84,12 +84,11 @@ NSString * const kCellIdentifier = @"kCellIdentifier";
     }
     
     if (indexPath.row == 5) {
-        [[CTMediator sharedInstance] CTMediator_nativeViewControllerForProfileWithLoginHandler:^(UIViewController * viewController, BOOL loginSuccess) {
-            if (loginSuccess) {
-                [self.navigationController pushViewController:viewController animated:YES];
-            } else {
-                NSLog(@"login error");
-            }
+        [[CTMediator sharedInstance] CTMediator_nativeViewControllerForProfileWithSuccessHandler:^(UIViewController *viewController) {
+            [self.navigationController pushViewController:viewController animated:YES];
+        } failHandler:^{
+            NSLog(@"login error");
+            
         }];
     }
 }

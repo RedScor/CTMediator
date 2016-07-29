@@ -16,9 +16,10 @@ NSString * const kCTMediatorActionNativeFetchProfileViewController = @"nativeFet
 /* 个人中心页面需要登录后才能操作，所以传入没有登录时的处理回调
  * 如果不需要知道是否登录，回调直接传入nil，获取返回的个人中心控制器即可
  */
-- (id)CTMediator_nativeViewControllerForProfileWithLoginHandler:(void (^)(UIViewController *, BOOL))loginHandler {
+- (id)CTMediator_nativeViewControllerForProfileWithSuccessHandler:(void (^)(UIViewController *))successHandler failHandler:(void (^)())failHandler {
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
-    if (loginHandler) params[@"loginHandler"] = loginHandler;
+    if (successHandler) params[@"successHandler"]   = successHandler;
+    if (failHandler)    params[@"failHandler"]      = failHandler;
     
     UIViewController *viewController = [self performTarget:kCTMediatorTargetProfile
                                                     action:kCTMediatorActionNativeFetchProfileViewController
