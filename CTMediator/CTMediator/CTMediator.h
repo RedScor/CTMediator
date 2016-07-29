@@ -8,7 +8,6 @@
 
 #import <Foundation/Foundation.h>
 
-
 @interface CTMediator : NSObject
 
 + (instancetype)sharedInstance;

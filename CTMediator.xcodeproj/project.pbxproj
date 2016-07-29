@@ -18,6 +18,12 @@
 		4A5CE5251C953D7D006AEDB9 /* DemoModuleADetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A5CE5241C953D7D006AEDB9 /* DemoModuleADetailViewController.m */; };
 		4A5CE52B1C9547B2006AEDB9 /* Target_A.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A5CE52A1C9547B2006AEDB9 /* Target_A.m */; };
 		6A1C7FA419878A7AFA10DB7C /* libPods-CTMediator.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CDD4389F5AEA1D8F6AA0C9F /* libPods-CTMediator.a */; };
+		D63EDDED1D4A4BEF00A4F03A /* CTMediator+CTMediatorLoginModuleActions.m in Sources */ = {isa = PBXBuildFile; fileRef = D63EDDEC1D4A4BEF00A4F03A /* CTMediator+CTMediatorLoginModuleActions.m */; };
+		D63EDDF21D4A4E3F00A4F03A /* Target_Login.m in Sources */ = {isa = PBXBuildFile; fileRef = D63EDDF11D4A4E3F00A4F03A /* Target_Login.m */; };
+		D63EDDF51D4A4E5D00A4F03A /* CTLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D63EDDF41D4A4E5D00A4F03A /* CTLoginViewController.m */; };
+		D64198FC1D4AF20D001904CB /* CTProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D64198FB1D4AF20D001904CB /* CTProfileViewController.m */; };
+		D64198FF1D4AF21F001904CB /* Target_Profile.m in Sources */ = {isa = PBXBuildFile; fileRef = D64198FE1D4AF21F001904CB /* Target_Profile.m */; };
+		D64199021D4AF23C001904CB /* CTMediator+CTMediatorProfileModuleActions.m in Sources */ = {isa = PBXBuildFile; fileRef = D64199011D4AF23C001904CB /* CTMediator+CTMediatorProfileModuleActions.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +47,19 @@
 		4A5CE5241C953D7D006AEDB9 /* DemoModuleADetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemoModuleADetailViewController.m; sourceTree = "<group>"; };
 		4A5CE5291C9547B2006AEDB9 /* Target_A.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Target_A.h; sourceTree = "<group>"; };
 		4A5CE52A1C9547B2006AEDB9 /* Target_A.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Target_A.m; sourceTree = "<group>"; };
+		D63EDDE31D4A402F00A4F03A /* CTShouldLoginProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTShouldLoginProtocol.h; sourceTree = "<group>"; };
+		D63EDDEB1D4A4BEF00A4F03A /* CTMediator+CTMediatorLoginModuleActions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CTMediator+CTMediatorLoginModuleActions.h"; sourceTree = "<group>"; };
+		D63EDDEC1D4A4BEF00A4F03A /* CTMediator+CTMediatorLoginModuleActions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CTMediator+CTMediatorLoginModuleActions.m"; sourceTree = "<group>"; };
+		D63EDDF01D4A4E3F00A4F03A /* Target_Login.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Target_Login.h; sourceTree = "<group>"; };
+		D63EDDF11D4A4E3F00A4F03A /* Target_Login.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Target_Login.m; sourceTree = "<group>"; };
+		D63EDDF31D4A4E5D00A4F03A /* CTLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTLoginViewController.h; sourceTree = "<group>"; };
+		D63EDDF41D4A4E5D00A4F03A /* CTLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTLoginViewController.m; sourceTree = "<group>"; };
+		D64198FA1D4AF20D001904CB /* CTProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTProfileViewController.h; sourceTree = "<group>"; };
+		D64198FB1D4AF20D001904CB /* CTProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTProfileViewController.m; sourceTree = "<group>"; };
+		D64198FD1D4AF21F001904CB /* Target_Profile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Target_Profile.h; sourceTree = "<group>"; };
+		D64198FE1D4AF21F001904CB /* Target_Profile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Target_Profile.m; sourceTree = "<group>"; };
+		D64199001D4AF23C001904CB /* CTMediator+CTMediatorProfileModuleActions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CTMediator+CTMediatorProfileModuleActions.h"; sourceTree = "<group>"; };
+		D64199011D4AF23C001904CB /* CTMediator+CTMediatorProfileModuleActions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CTMediator+CTMediatorProfileModuleActions.m"; sourceTree = "<group>"; };
 		E9C114EF1101F17773DD4798 /* Pods-CTMediator.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CTMediator.release.xcconfig"; path = "Pods/Target Support Files/Pods-CTMediator/Pods-CTMediator.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -77,7 +96,10 @@
 		4A5CE4FC1C9531C9006AEDB9 /* CTMediator */ = {
 			isa = PBXGroup;
 			children = (
+				D63EDDE31D4A402F00A4F03A /* CTShouldLoginProtocol.h */,
 				4A5CE5141C9531E9006AEDB9 /* CTMediator */,
+				D63EDDEE1D4A4E3F00A4F03A /* LoginModule */,
+				D64198F81D4AF1D0001904CB /* ProfileModule */,
 				4A5CE5211C953D5A006AEDB9 /* DemoModule */,
 				4A5CE5001C9531C9006AEDB9 /* AppDelegate.h */,
 				4A5CE5011C9531C9006AEDB9 /* AppDelegate.m */,
@@ -113,6 +135,8 @@
 		4A5CE5151C95320F006AEDB9 /* Categories */ = {
 			isa = PBXGroup;
 			children = (
+				D64198F71D4AF1BB001904CB /* ProfileModule */,
+				D63EDDEA1D4A4BD600A4F03A /* LoginModule */,
 				4A5CE5161C95320F006AEDB9 /* ModuleA */,
 			);
 			path = Categories;
@@ -163,6 +187,62 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		D63EDDEA1D4A4BD600A4F03A /* LoginModule */ = {
+			isa = PBXGroup;
+			children = (
+				D63EDDEB1D4A4BEF00A4F03A /* CTMediator+CTMediatorLoginModuleActions.h */,
+				D63EDDEC1D4A4BEF00A4F03A /* CTMediator+CTMediatorLoginModuleActions.m */,
+			);
+			path = LoginModule;
+			sourceTree = "<group>";
+		};
+		D63EDDEE1D4A4E3F00A4F03A /* LoginModule */ = {
+			isa = PBXGroup;
+			children = (
+				D63EDDF31D4A4E5D00A4F03A /* CTLoginViewController.h */,
+				D63EDDF41D4A4E5D00A4F03A /* CTLoginViewController.m */,
+				D63EDDEF1D4A4E3F00A4F03A /* Actions */,
+			);
+			path = LoginModule;
+			sourceTree = "<group>";
+		};
+		D63EDDEF1D4A4E3F00A4F03A /* Actions */ = {
+			isa = PBXGroup;
+			children = (
+				D63EDDF01D4A4E3F00A4F03A /* Target_Login.h */,
+				D63EDDF11D4A4E3F00A4F03A /* Target_Login.m */,
+			);
+			path = Actions;
+			sourceTree = "<group>";
+		};
+		D64198F71D4AF1BB001904CB /* ProfileModule */ = {
+			isa = PBXGroup;
+			children = (
+				D64199001D4AF23C001904CB /* CTMediator+CTMediatorProfileModuleActions.h */,
+				D64199011D4AF23C001904CB /* CTMediator+CTMediatorProfileModuleActions.m */,
+			);
+			path = ProfileModule;
+			sourceTree = "<group>";
+		};
+		D64198F81D4AF1D0001904CB /* ProfileModule */ = {
+			isa = PBXGroup;
+			children = (
+				D64198FA1D4AF20D001904CB /* CTProfileViewController.h */,
+				D64198FB1D4AF20D001904CB /* CTProfileViewController.m */,
+				D64198F91D4AF1E5001904CB /* Actions */,
+			);
+			path = ProfileModule;
+			sourceTree = "<group>";
+		};
+		D64198F91D4AF1E5001904CB /* Actions */ = {
+			isa = PBXGroup;
+			children = (
+				D64198FD1D4AF21F001904CB /* Target_Profile.h */,
+				D64198FE1D4AF21F001904CB /* Target_Profile.m */,
+			);
+			path = Actions;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -170,12 +250,15 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4A5CE5111C9531C9006AEDB9 /* Build configuration list for PBXNativeTarget "CTMediator" */;
 			buildPhases = (
+				0F9FB477D20CB4E9EA60478E /* 📦 Check Pods Manifest.lock */,
 				0DEB0101A9257C7385F33550 /* [CP] Check Pods Manifest.lock */,
 				4A5CE4F61C9531C9006AEDB9 /* Sources */,
 				4A5CE4F71C9531C9006AEDB9 /* Frameworks */,
 				4A5CE4F81C9531C9006AEDB9 /* Resources */,
 				DE1107096F7B448AE308B9C0 /* [CP] Embed Pods Frameworks */,
 				9707C81239BADCAA33999A4E /* [CP] Copy Pods Resources */,
+				F1CA90C2A977692DB8189461 /* 📦 Embed Pods Frameworks */,
+				66E8DB4C3BAC31498E8E72F6 /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -247,6 +330,36 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
+		0F9FB477D20CB4E9EA60478E /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		66E8DB4C3BAC31498E8E72F6 /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CTMediator/Pods-CTMediator-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		9707C81239BADCAA33999A4E /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -277,6 +390,21 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CTMediator/Pods-CTMediator-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		F1CA90C2A977692DB8189461 /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CTMediator/Pods-CTMediator-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -284,13 +412,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D63EDDF21D4A4E3F00A4F03A /* Target_Login.m in Sources */,
+				D63EDDF51D4A4E5D00A4F03A /* CTLoginViewController.m in Sources */,
+				D64198FF1D4AF21F001904CB /* Target_Profile.m in Sources */,
 				4A5CE51D1C9538CB006AEDB9 /* CTMediator+CTMediatorModuleAActions.m in Sources */,
+				D64199021D4AF23C001904CB /* CTMediator+CTMediatorProfileModuleActions.m in Sources */,
 				4A5CE5051C9531C9006AEDB9 /* ViewController.m in Sources */,
+				D64198FC1D4AF20D001904CB /* CTProfileViewController.m in Sources */,
 				4A5CE5021C9531C9006AEDB9 /* AppDelegate.m in Sources */,
 				4A5CE4FF1C9531C9006AEDB9 /* main.m in Sources */,
 				4A5CE5251C953D7D006AEDB9 /* DemoModuleADetailViewController.m in Sources */,
 				4A5CE51A1C95322F006AEDB9 /* CTMediator.m in Sources */,
 				4A5CE52B1C9547B2006AEDB9 /* Target_A.m in Sources */,
+				D63EDDED1D4A4BEF00A4F03A /* CTMediator+CTMediatorLoginModuleActions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

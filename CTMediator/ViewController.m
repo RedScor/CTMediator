@@ -9,6 +9,7 @@
 #import "ViewController.h"
 #import <HandyFrame/UIView+LayoutMethods.h>
 #import "CTMediator+CTMediatorModuleAActions.h"
+#import "CTMediator+CTMediatorProfileModuleActions.h"
 
 NSString * const kCellIdentifier = @"kCellIdentifier";
 
@@ -81,6 +82,12 @@ NSString * const kCellIdentifier = @"kCellIdentifier";
             NSLog(@"%@", info);
         }];
     }
+    
+    if (indexPath.row == 5) {
+        [[CTMediator sharedInstance] CTMediator_nativeViewControllerForProfileWithLoginHandler:^(UIViewController * viewController) {
+            [self.navigationController pushViewController:viewController animated:YES];
+        }];
+    }
 }
 
 #pragma mark - getters and setters
@@ -99,7 +106,7 @@ NSString * const kCellIdentifier = @"kCellIdentifier";
 - (NSArray *)dataSource
 {
     if (_dataSource == nil) {
-        _dataSource = @[@"present detail view controller", @"push detail view controller", @"present image", @"present image when error", @"show alert"];
+        _dataSource = @[@"present detail view controller", @"push detail view controller", @"present image", @"present image when error", @"show alert", @"push profile view controller"];
     }
     return _dataSource;
 }

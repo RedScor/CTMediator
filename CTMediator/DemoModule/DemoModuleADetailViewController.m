@@ -9,6 +9,8 @@
 #import "DemoModuleADetailViewController.h"
 #import <HandyFrame/UIView+LayoutMethods.h>
 
+
+
 @interface DemoModuleADetailViewController ()
 
 @property (nonatomic, strong, readwrite) UILabel *valueLabel;
@@ -55,6 +57,7 @@
         [self.navigationController popViewControllerAnimated:YES];
     }
 }
+
 
 #pragma mark - getters and setters
 - (UILabel *)valueLabel
