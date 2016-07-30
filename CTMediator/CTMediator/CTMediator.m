@@ -11,7 +11,7 @@
 #import "CTShouldLoginProtocol.h"
 static NSString *const kCTMediatorTargetLogin = @"Login";
 static NSString * const kCTMediatorActionNativePresentLoginViewController = @"nativePresentLoginViewController";
-
+static NSString * const kCTMediatorActionNativeIsLoginedAction = @"nativeIsLogined";
 @implementation CTMediator
 
 #pragma mark - public methods
@@ -79,12 +79,20 @@ static NSString * const kCTMediatorActionNativePresentLoginViewController = @"na
     /* 调用组件需要登录时进行统一拦截 */
     if ([target conformsToProtocol:@protocol(CTShouldLoginProtocol)] &&
         [target shouldLoginBeforeAction:actionName]) {
-        [self performTarget:kCTMediatorTargetLogin
-                     action:kCTMediatorActionNativePresentLoginViewController
-                     params:@{@"target":targetName,
-                              @"action":actionName,
-                              @"params":params}];
-        return nil;
+        
+        /* 向登录模块请求当前是否已经登录 */
+        BOOL isLogined = [[self performTarget:kCTMediatorTargetLogin
+                                       action:kCTMediatorActionNativeIsLoginedAction
+                                       params:nil] boolValue];
+        if (!isLogined) {
+            [self performTarget:kCTMediatorTargetLogin
+                         action:kCTMediatorActionNativePresentLoginViewController
+                         params:@{@"target":targetName,
+                                  @"action":actionName,
+                                  @"params":params}];
+            
+            return nil;
+        }
     }
     
     if (target == nil) {
