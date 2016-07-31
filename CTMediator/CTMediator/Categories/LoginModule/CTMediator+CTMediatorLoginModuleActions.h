@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface CTMediator (CTMediatorLoginModleActions)
-- (UIViewController *)CTMediator_nativeViewControllerForLoginWithResultHandler:(void (^)(BOOL))resultHandler;
+- (UIViewController *)CTMediator_nativeViewControllerForLoginWithSuccessHandler:(void(^)())successHandler;
 @end

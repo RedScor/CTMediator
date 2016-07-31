@@ -17,20 +17,26 @@ static NSString *const kCTIsLoginedKey = @"kCTIsLoginedKey";
 - (id)Action_nativePresentLoginViewController:(NSDictionary *)params {
     CTLoginViewController *viewController = [[CTLoginViewController alloc] init];
     
-    viewController.successHandler = ^{
-        /* 设置当前已登陆 */
-        [[NSUserDefaults standardUserDefaults] setBool:YES
-                                                forKey:kCTIsLoginedKey];
-        /* 向CTMediator重新请求原来的动作 */
-        [[CTMediator sharedInstance] performTarget:params[@"target"]
-                                            action:params[@"action"]
-                                            params:params[@"params"]];
-    };
+    void (^successHandler)()    = params[@"successHandler"];
+    BOOL isLogined = [[NSUserDefaults standardUserDefaults] boolForKey:kCTIsLoginedKey];
+    if (!isLogined) {
+        /* 没有登录，弹出登录夜，传入登录成功回调 */
+        viewController.successHandler = ^{
+            /* 设置当前已登陆 */
+            [[NSUserDefaults standardUserDefaults] setBool:YES
+                                        forKey:kCTIsLoginedKey];
+            /* 执行登录成功回调 */
+            !successHandler ? : successHandler();
+        };
+        
+        [[UIApplication sharedApplication].keyWindow.rootViewController
+         presentViewController:viewController animated:YES completion:nil];
+    } else {
+        /* 已登陆，直接执行成功回调 */
+        !successHandler ? : successHandler();
+    }
     
-    [[UIApplication sharedApplication].keyWindow.rootViewController
-     presentViewController:viewController animated:YES completion:nil];
-
-    return nil;
+    return viewController;
 }
 
 - (id)Action_nativeIsLogined:(NSDictionary *)params {

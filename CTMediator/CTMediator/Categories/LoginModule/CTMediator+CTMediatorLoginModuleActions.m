@@ -16,13 +16,14 @@ NSString * const kCTMediatorActionNativeFetchLoginViewController = @"nativeFetch
 /* 实际应用时，这个分类可以放在一个单独的Pod中，由对应模块负责人维护 */
 
 /* 调用方传入登录回调 */
-- (UIViewController *)CTMediator_nativeViewControllerForLoginWithResultHandler:(void (^)(BOOL))resultHandler {
+- (UIViewController *)CTMediator_nativeViewControllerForLoginWithSuccessHandler:(void(^)())successHandler {
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
-    if (resultHandler) params[@"resultHandler"] = resultHandler;
+    if (successHandler) params[@"successHandler"]   = successHandler;
     
     UIViewController *viewController = [self performTarget:kCTMediatorTargetLogin
                                                     action:kCTMediatorActionNativeFetchLoginViewController
                                                     params:params];
+    
     return viewController;
 }
 
